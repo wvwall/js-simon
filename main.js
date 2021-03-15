@@ -33,11 +33,11 @@ $(document).ready(function () {
             if (numeri.includes(numeroUtente)){
                 numeriGiusti.push(numeroUtente)
             }
-                $("#risultato").text("Ne hai ricordati: " + numeriGiusti.length);
+                $("#risultato").text("Ne hai ricordati : " + numeriGiusti.length);
                
             
         }
-    },6000);
+    },60000);
     
    
     
@@ -82,7 +82,7 @@ function creaNum(array, max) {
 //Far partire un timer di 30 secondi
   // Countdown di 30 secondi per memorizzare
   function countdown30 (){
-    var count = 3;
+    var count = 30;
     var conta = setInterval(function () {
     if (count > 0) {
         $('#count').text(count);
