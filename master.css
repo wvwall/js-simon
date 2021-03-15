@@ -11,3 +11,12 @@
     align-items: center;
     justify-content: space-evenly;
 }
+.numeri h3 {
+    font-size: 35px;
+}
+.loading {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
