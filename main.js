@@ -5,6 +5,7 @@ $(document).ready(function () {
     //Generare 5 numeri casuali da presentare all'utente
     var numeri = [];
     var numeriUtente = [];
+    var numeriGiusti = [];
     randomNumberRange (1, 100);
     creaNum(numeri, 100);
     
@@ -20,17 +21,29 @@ $(document).ready(function () {
 
     countdown30();
 
-    $("#count_2").text("ATTENDI PER INSERIRE");
+    $("#count_2").show();
 
     //Far inserire uno alla volta i humeri che ha visto l'utente
     
     setTimeout(function() {
+        $("#count_2").hide();
         for (var i = 0; i < 5; i++) {
             var numeroUtente = parseInt(prompt("Inserisci un numero:"));
             numeriUtente.push(numeroUtente);
+            if (numeri.includes(numeroUtente)){
+                numeriGiusti.push(numeroUtente)
+            }
+                $("#risultato").text("Ne hai ricordati: " + numeriGiusti.length);
+               
+            
         }
-    },60000);
+    },6000);
+    
+   
+    
     console.log(numeriUtente);
+    console.log(numeriGiusti);
+    
     
 
   
@@ -69,7 +82,7 @@ function creaNum(array, max) {
 //Far partire un timer di 30 secondi
   // Countdown di 30 secondi per memorizzare
   function countdown30 (){
-    var count = 30;
+    var count = 3;
     var conta = setInterval(function () {
     if (count > 0) {
         $('#count').text(count);
@@ -87,6 +100,8 @@ function creaNum(array, max) {
 
 
 //Confrontare numeri inserite con quelli generati
+
+
 //Stampare risultato numeri indovinati
 
 
