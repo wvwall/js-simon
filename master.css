@@ -14,6 +14,10 @@
 .numeri h3 {
     font-size: 35px;
 }
+#count {
+    color: red;
+    font-size: 50px;
+}
 
 .loading {
     display: flex;
@@ -27,7 +31,7 @@
 }
 .loading h2 {
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 #count_2 {
