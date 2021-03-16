@@ -28,18 +28,23 @@ $(document).ready(function () {
         $("#count_2").hide();
         
         for (var i = 0; i < 5; i++) {
+            
             var numeroUtente = parseInt(prompt("Inserisci un numero:"));
             numeriUtente.push(numeroUtente);
 
-            if (numeri.includes(numeroUtente)){
+            if (numeri.includes(parseInt(numeroUtente))){
                 numeriGiusti.push(numeroUtente)
             }
                 $("#risultato").text("Ne hai ricordati : " + numeriGiusti.length);
                 $("#numeriUtente").text("Questi sono i numeri che hai inserito :" + numeriUtente);
-                
+                setTimeout(function() {
+                    $("#numeri").text("Ecco i numeri iniziali :" + numeri)
+                },5000);
+                 
         }
     },60000);
-     
+    
+    
 
 });
 
