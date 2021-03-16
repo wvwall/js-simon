@@ -34,13 +34,13 @@ $(document).ready(function () {
                 numeriGiusti.push(numeroUtente)
             }
                 $("#risultato").text("Ne hai ricordati : " + numeriGiusti.length);
-               
-            
+                $("#numeriUtente").text("Questi sono i numeri che hai inserito :" + numeriUtente);
+                
         }
     },60000);
     
    
-    
+
     console.log(numeriUtente);
     console.log(numeriGiusti);
     
